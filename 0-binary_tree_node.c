@@ -1,13 +1,14 @@
 #include <stdlib.h>
 #include "binary_trees.h"
-
+#include <stdio.h>
 /**
- * binary_tree_node - Krijon një nyje të pemës binare
- * @parent: Pointer te nyja prind
- * @value: Vlera për të vendosur në nyje
+ * binary_tree_node - Creates a binary tree node
+ * @parent: Pointer to the parent node
+ * @value: Value to put in the new node
  *
- * Return: Pointer te nyja e krijuar, ose NULL në rast të dështimit
+ * Return: Pointer to the new node, or NULL on failure
  */
+
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
     binary_tree_t *new_node = malloc(sizeof(binary_tree_t));
