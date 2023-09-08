@@ -1,4 +1,5 @@
 #include "binary_trees.h"
+#include <stddef.h> /*Include <stddef.h> for NULL*/
 
 /**
  * binary_tree_is_root - Checks if a node is a root
@@ -11,6 +12,9 @@ int binary_tree_is_root(const binary_tree_t *node)
     if (node == NULL)
         return (0);
 
-    return (node->parent == NULL);
+    if (node->parent == NULL)
+        return (1);
+
+    return (0); /*Handle the case when the node is not a root*/
 }
 
