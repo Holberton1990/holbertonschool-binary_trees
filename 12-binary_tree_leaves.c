@@ -9,6 +9,8 @@
  */
 size_t binary_tree_leaves(const binary_tree_t *tree)
 {
+    size_t left_leaves, right_leaves;
+
     if (tree == NULL)
         return (0);
 
@@ -17,8 +19,8 @@ size_t binary_tree_leaves(const binary_tree_t *tree)
         return (1);
 
     /* Recursively count the leaves in the left and right subtrees */
-    size_t left_leaves = binary_tree_leaves(tree->left);
-    size_t right_leaves = binary_tree_leaves(tree->right);
+    left_leaves = binary_tree_leaves(tree->left);
+    right_leaves = binary_tree_leaves(tree->right);
 
     /* Return the sum of leaves in left and right subtrees */
     return (left_leaves + right_leaves);
