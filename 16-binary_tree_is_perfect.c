@@ -1,5 +1,4 @@
 #include "binary_trees.h"
-#include "proxy_height.c"
 /**
  * binary_tree_is_perfect - Check if a binary tree is perfect.
  * @tree: A pointer to the root node of the tree to check.
